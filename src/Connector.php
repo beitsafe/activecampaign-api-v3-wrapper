@@ -71,7 +71,7 @@ class Connector
 	protected function request($method, $endpoint, $data = [])
 	{
 		try {
-			$client		= new Client(['headers' => ['Api-Token' => $this->api_key]]);
+			$client		= new Client(['headers' => ['Api-Token' => $this->api_key],'verify' => false]);
 			$url		= $this->buildUrl($endpoint);
 			$options	= !empty($data) ? ['json' => $data] : [];
 			$request 	= $client->request($method, $url, $options);
