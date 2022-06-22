@@ -1,10 +1,10 @@
 <?php
 
-namespace Dhrechanyi\ActiveCampaign;
+namespace Beitsafe\ActiveCampaign;
 
-use Dhrechanyi\ActiveCampaign\Classes\Lists;
-use Dhrechanyi\ActiveCampaign\Classes\Contacts;
-use Dhrechanyi\ActiveCampaign\Classes\Tags;
+use Beitsafe\ActiveCampaign\Classes\Lists;
+use Beitsafe\ActiveCampaign\Classes\Contacts;
+use Beitsafe\ActiveCampaign\Classes\Tags;
 
 
 class ActiveCampaign

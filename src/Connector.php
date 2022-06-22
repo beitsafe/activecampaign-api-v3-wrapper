@@ -1,6 +1,6 @@
 <?php
 
-namespace Dhrechanyi\ActiveCampaign;
+namespace Beitsafe\ActiveCampaign;
 
 
 use GuzzleHttp\Client;

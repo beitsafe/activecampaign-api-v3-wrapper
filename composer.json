@@ -1,6 +1,6 @@
 {
-    "name": "dhrechanyi/activecampaign-api-v3-wrapper",
-    "description": "Wrapper for ActiveCampaing API v3, which allows to work with their services, using PHP",
+    "name": "beitsafe/activecampaign-api-v3-wrapper",
+    "description": "Wrapper for ActiveCampaign API v3, which allows to work with their services, using PHP",
     "type": "library",
     "require": {
         "ext-json": "*",
@@ -11,13 +11,13 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Denys Hrechanyi",
-            "email": "dhrechanyi@gmail.com"
+            "name": "Developer BE IT SAFE",
+            "email": "developers@beitsafe.com"
         }
     ],
     "autoload": {
       "psr-4": {
-        "Dhrechanyi\\ActiveCampaign\\": "src/",
+        "Beitsafe\\ActiveCampaign\\": "src/",
         "GuzzleHttp\\": "src/"
       }
     }

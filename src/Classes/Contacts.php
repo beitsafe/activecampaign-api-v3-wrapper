@@ -1,8 +1,8 @@
 <?php
 
-namespace Dhrechanyi\ActiveCampaign\Classes;
+namespace Beitsafe\ActiveCampaign\Classes;
 
-use Dhrechanyi\ActiveCampaign\Connector;
+use Beitsafe\ActiveCampaign\Connector;
 
 
 class Contacts extends Connector
