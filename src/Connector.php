@@ -7,7 +7,6 @@ use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
 use GuzzleHttp\Exception\ServerException;
 
-
 class Connector
 {
 
@@ -19,10 +18,10 @@ class Connector
 	protected $orderby_params;
 
 
-	public function __construct($base_url, $api_key)
+	public function __construct()
 	{
-		$this->api_key			= $api_key;
-		$this->base_url 		= rtrim($base_url, '/') . '/';
+		$this->api_key			= env('AC_API_KEY');
+		$this->base_url 		= rtrim(env('AC_API_URL'), '/') . '/';
 		$this->paginate_params 	= [];
 		$this->filter_params 	= [];
 		$this->query_params 	= [];

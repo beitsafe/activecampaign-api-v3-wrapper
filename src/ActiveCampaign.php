@@ -2,6 +2,7 @@
 
 namespace Beitsafe\ActiveCampaign;
 
+use Beitsafe\ActiveCampaign\Classes\CustomFields;
 use Beitsafe\ActiveCampaign\Classes\Lists;
 use Beitsafe\ActiveCampaign\Classes\Contacts;
 use Beitsafe\ActiveCampaign\Classes\Tags;
@@ -9,28 +10,23 @@ use Beitsafe\ActiveCampaign\Classes\Tags;
 
 class ActiveCampaign
 {
-	private $base_url;
-	private $api_key;
+    public function lists()
+    {
+        return new Lists();
+    }
 
-	public function __construct()
-	{
-		$this->base_url = env('AC_API_URL');
-		$this->api_key = env('AC_API_KEY');
-	}
+    public function contacts()
+    {
+        return new Contacts();
+    }
 
-	public function lists()
-	{
-		return new Lists($this->base_url, $this->api_key);
-	}
+    public function tags()
+    {
+        return new Tags();
+    }
 
-	public function contacts()
-	{
-		return new Contacts($this->base_url, $this->api_key);
-	}
-
-	public function tags()
-	{
-		return new Tags($this->base_url, $this->api_key);
-	}
-
+    public function customfields()
+    {
+        return new CustomFields();
+    }
 }
