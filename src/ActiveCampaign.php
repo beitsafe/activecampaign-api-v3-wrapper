@@ -12,10 +12,10 @@ class ActiveCampaign
 	private $base_url;
 	private $api_key;
 
-	public function __construct($base_url, $api_key)
+	public function __construct()
 	{
-		$this->base_url = $base_url;
-		$this->api_key = $api_key;
+		$this->base_url = env('AC_API_URL');
+		$this->api_key = env('AC_API_KEY');
 	}
 
 	public function lists()
