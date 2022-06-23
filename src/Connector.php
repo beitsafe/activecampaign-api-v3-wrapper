@@ -72,7 +72,8 @@ class Connector
 		try {
 			$client		= new Client(['headers' => ['Api-Token' => $this->api_key],'verify' => false]);
 			$url		= $this->buildUrl($endpoint);
-			$options	= !empty($data) ? ['json' => $data] : [];
+            $key	    = ($method == 'GET') ? 'query' : 'json';
+            $options	= !empty($data) ? [$key => $data] : [];
 			$request 	= $client->request($method, $url, $options);
 
 			return json_decode($request->getBody()->getContents(), true);
