@@ -15,9 +15,9 @@ class Tags extends Connector
 	}
 
 
-	public function all()
+	public function all($search = null)
 	{
-		return $this->request('GET', 'tags');
+		return $this->request('GET', 'tags',['search'=>$search]);
 	}
 
 
