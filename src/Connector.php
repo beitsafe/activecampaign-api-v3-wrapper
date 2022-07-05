@@ -77,15 +77,8 @@ class Connector
 			$request 	= $client->request($method, $url, $options);
 
 			return json_decode($request->getBody()->getContents(), true);
-
-		} catch (ClientException $exception) {
-			 echo $exception->getMessage();
-		} catch (ServerException $exception) {
-			 echo $exception->getMessage();
-		}
-
-		die;
+		} catch (\Exception $exception) {
+            throw new \Exception($exception->getMessage());
+        }
 	}
-
-
 }
